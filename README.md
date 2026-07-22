@@ -58,6 +58,29 @@ Trained a baseline Logistic Regression classifier to predict `Survived`.
 
 **Next steps:** feature scaling, regularization tuning, and comparing against tree-based models (Random Forest, Gradient Boosting) in upcoming weeks.
 
+## Week 3: Model Evaluation & Tuning: Beyond Accuracy
+
+Revisited the Week 2 Logistic Regression model to evaluate it properly (not just on accuracy) and tune it.
+
+**Why accuracy alone can mislead:** on an imbalanced dataset like this (more non-survivors than survivors), a model can post a high accuracy score just by leaning toward the majority class. Precision, recall, and F1 broken out per class expose that imbalance in a way a single accuracy number can't.
+
+**Tuning:** GridSearchCV, 5-fold CV, scored on F1, over:
+
+- C (regularization strength): [0.01, 0.1, 1, 10, 100]
+- solver: ["lbfgs", "liblinear"]
+
+Best parameters found: C=10, solver=lbfgs
+
+Before vs. after (on the "Survived" class):
+
+Metric	Baseline	Tuned	Change
+Accuracy	81.01%	81.01%	0.00
+Precision	0.778	0.769	-0.009
+Recall	0.710	0.725	+0.014
+F1-score	0.742	0.746	+0.004
+
+Takeaway: tuning gave a modest, incremental improvement — recall and F1 on the minority class ticked up slightly while accuracy stayed flat. This is a realistic outcome for a simple model; the bigger lever for further gains is likely better features or a different model family (e.g. tree-based ensembles) rather than more hyperparameter search on Logistic Regression.
+
 ## Tools
 
 Python · pandas · NumPy · matplotlib · seaborn · scikit-learn · Jupyter Notebook
