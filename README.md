@@ -33,7 +33,7 @@ Cleaned the dataset and used visualization to catch patterns and outliers.
 
 **Visualizations:** histogram (`Age` distribution), boxplot (`Fare` by survival), bar chart (survival rate by `Pclass`), correlation heatmap (numerical features).
 
-**Which feature affects survival most?** `Sex`, by a wide margin: 74.2% of women survived vs. 18.9% of men. ** `Pclass` and `Fare` were the next-strongest signals, consistent with better lifeboat access for higher-class/wealthier passengers. **
+**Which feature affects survival most?** `Sex`, by a wide margin: 74.2% of women survived vs. 18.9% of men. `Pclass` and `Fare` were the next-strongest signals, consistent with better lifeboat access for higher-class/wealthier passengers.
 
 ## Week 2: First Classification Model
 
