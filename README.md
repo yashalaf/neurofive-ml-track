@@ -69,17 +69,18 @@ Revisited the Week 2 Logistic Regression model to evaluate it properly (not just
 - C (regularization strength): [0.01, 0.1, 1, 10, 100]
 - solver: ["lbfgs", "liblinear"]
 
-Best parameters found: C=10, solver=lbfgs
+**Best parameters found:** C=10, solver=lbfgs
 
-Before vs. after (on the "Survived" class):
+**Before vs. after (on the "Survived" class):**
 
-Metric	Baseline	Tuned	Change
-Accuracy	81.01%	81.01%	0.00
-Precision	0.778	0.769	-0.009
-Recall	0.710	0.725	+0.014
-F1-score	0.742	0.746	+0.004
+| Metric | Baseline |	Tuned	| Change |
+|---|---|---|
+| **Accuracy** | 81.01% |	81.01% | 0.00 |
+| **Precision** |	0.778 |	0.769 |	-0.009 |
+| **Recall** | 0.710 |0.725 |	+0.014 |
+| **F1-score** |	0.742 |	0.746 |	+0.004 |
 
-Takeaway: tuning gave a modest, incremental improvement — recall and F1 on the minority class ticked up slightly while accuracy stayed flat. This is a realistic outcome for a simple model; the bigger lever for further gains is likely better features or a different model family (e.g. tree-based ensembles) rather than more hyperparameter search on Logistic Regression.
+**Takeaway:** tuning gave a modest, incremental improvement in recall and F1 on the minority class, which ticked up slightly while accuracy stayed flat. This is a realistic outcome for a simple model; the bigger lever for further gains is likely better features or a different model family (e.g., tree-based ensembles) rather than more hyperparameter search on Logistic Regression.
 
 ## Tools
 
