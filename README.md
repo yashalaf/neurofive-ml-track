@@ -74,7 +74,7 @@ Revisited the Week 2 Logistic Regression model to evaluate it properly (not just
 **Before vs. after (on the "Survived" class):**
 
 | Metric | Baseline |	Tuned	| Change |
-|---|---|---|
+|---|---|---|---| 
 | **Accuracy** | 81.01% |	81.01% | 0.00 |
 | **Precision** |	0.778 |	0.769 |	-0.009 |
 | **Recall** | 0.710 |0.725 |	+0.014 |
