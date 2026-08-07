@@ -5,9 +5,13 @@ import streamlit as st
 st.set_page_config(page_title="Customer Churn Predictor", page_icon="📉", layout="centered")
 
 
+import os
+
 @st.cache_resource
 def load_pipeline():
-    return joblib.load("churn_pipeline.joblib")
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    model_path = os.path.join(base_dir, "churn_pipeline.joblib")
+    return joblib.load(model_path)
 
 
 pipeline = load_pipeline()
