@@ -91,7 +91,7 @@ Took the Week 4 churn pipeline (`churn_pipeline.joblib` — Logistic Regression 
 
 **How it works:** the app collects raw inputs exactly as they exist in the original dataset, computes the same 2 engineered features from Week 4 (`NumServices`, `AvgMonthlySpend`) behind the scenes, then passes everything straight into the saved pipeline — no separate manual preprocessing step, since the pipeline handles scaling and encoding internally.
 
-**Live app:** _[[add your Streamlit Community Cloud URL here after deploying](https://week5b-whbjz5ewqsvajm3mnwjax2.streamlit.app/)]_
+**Live app:** _[(https://week5b-whbjz5ewqsvajm3mnwjax2.streamlit.app/)]_
 
 **To deploy it yourself:**
 1. Push `app.py`, `requirements.txt`, and `churn_pipeline.joblib` to this repo (same folder)
